@@ -1,4 +1,4 @@
-# magento2-study-guide
+# Magento2 Study Guide
 A Magento 2 Developer Study Guide
 
 ## Table of Contents
