@@ -6,6 +6,13 @@ All frontend controller classes should extend the class `Magento\Framework\App\A
 
 Which controller gets called is based on the url structure `frontname/actionpath/action` where the frontname is controlled in a module's routes.xml file, the actionpath is the subfolder in the module's Controller folder, and the action is the PHP class within that subfolder. This differs from Magento 1 where the controller file would be directly under the controllers folder. Also, in Magento 1 the action name was a function within your controller class. In Magento 2, the action name is the entire class because controller classes can only match a single action. In Magento 1 you were able to place multiple actions within a single controller class, but this is no longer the case in Magento 2.
 
+#### An example
+*/catalog/product/view*
+
+* **catalog** matches the route `frontName` value in the routes.xml file located in `Magento/Catalog/etc/frontend/routes.xml`.
+* **product** matches the `Product` folder within `Magento/Catalog/Controller/`.
+* **view** matches the View class at `Magento/Catalog/Controller/Product/View.php`.
+
 ### The "execute" method
 
 All Controllers need to have an `execute` method. This is the method which is called by Magento\Framework\App\FrontController::dispatch when it has found a controller class which matches the request.
