@@ -19,7 +19,6 @@ All Controllers need to have an `execute` method. This is the method which is ca
 
 Controllers should return an instance of the `Magento\Framework\Controller\ResultInterface` class. Generally this is done with a result page factory object which gets initialzed by a View Helper.
 
-
 #### Result Objects
 The execute method should return a Result object.
 
@@ -29,3 +28,14 @@ The execute method should return a Result object.
 |JSON|Magento\Controller\Result\Json|Used for returning JSON data.|
 |Forward|Magento\Controller\Result\Forward|Used to internally forward to another controller action. Does not redirect the user to another url.|
 |Redirect|Magento\Controller\Result\Redirect|Used to redirect the user to another url.|
+
+
+### Overriding Controllers
+
+Controllers can be overriden just like any other class in Magento 2, using plugins or DI preferences. Use a plugin to run code before or after a controller class' `execute` method.
+
+**OR**, you can use your own controller class in place of another controller class using preferences in a di.xml file. For example, to prefer your own controller over the `Magento\Catalog\Controller\Product\View` controller, place the following code in your di.xml file:
+```xml
+<preference for="Magento\Catalog\Controller\Product\View" 
+            type="Module\Vendor\Controller\Product\View" />
+```
