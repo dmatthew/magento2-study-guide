@@ -2,7 +2,7 @@
 
 The "C" in MVC. In Magento, the controller is used for gathering request parameters, and then calling on other classes to manage this data. Controllers can also handle exceptions that occur during this process.
 
-All Controller classes should extend the class `\Magento\Framework\App\Action\Action`.
+All frontend controller classes should extend the class `Magento\Framework\App\Action\Action` and all admin controller classes should extend the class `Magento\Backend\App\Action`.
 
 ### The "execute" method
 
