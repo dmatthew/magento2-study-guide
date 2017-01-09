@@ -33,3 +33,20 @@ simple-product-123,spanish_store,rojo
 ```
 
 The code which causes this is [Magento\ImportExport\Model\Import\Entity\AbstractEntity::getAttributeOptions](https://github.com/magento/magento2/blob/develop/app/code/Magento/ImportExport/Model/Import/Entity/AbstractEntity.php#L488-L489).
+
+
+### How do I add custom attributes to the import CSV.
+
+The documentation shows an example with any extra attributes being added to an additional_attributes column where the structure is attribute_code=value,attribute_code2=value2. This is not needed, but it does work. You can also add custom attributes to the product import CSV file just add them as another column, just like any other column.
+
+**This works:**
+```
+sku,custom_attribute,custom_attribute_2
+abc-123,My Value,Some other value
+```
+
+**This also works:**
+```
+sku,additional_attributes
+abc-123,custom_attribute=My Value,custom_attribute_2=Some other value
+```
