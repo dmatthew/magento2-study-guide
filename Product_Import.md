@@ -50,3 +50,16 @@ abc-123,My Value,Some other value
 sku,additional_attributes
 abc-123,custom_attribute=My Value,custom_attribute_2=Some other value
 ```
+
+### How do I import configurable products.
+
+You need to add a column `configurable_variations` with a structure like follows:
+* sku=SIMPLE_PRODUCT_SKU,CONFIGURABLE_ATTRIBUTE_CODE=SIMPLE_PRODUCT_VALUE
+
+Example:
+```
+sku,product_type,color,configurable_variations
+abc-123,simple,Blue,
+def-456,simple,Red,
+abc,configurable,,"sku=abc-123,color=Blue|sku=def-456,color=Red"
+```
