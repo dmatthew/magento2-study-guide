@@ -7,3 +7,4 @@ A Magento 2 Developer Study Guide
   1. [Controllers](/Controllers.md)
   1. [Object Repositories](/Object_Repositories.md)
   1. [Product_Import](/Product_Import.md)
+  1. [Layout XML](/Layout_Xml.md)
