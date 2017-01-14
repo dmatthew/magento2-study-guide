@@ -64,6 +64,6 @@ def-456,simple,Red,
 abc,configurable,,"sku=abc-123,color=Blue|sku=def-456,color=Red"
 ```
 
-### Can I change the attribute set of a Product using using the Product Import process?
+### Can I change the attribute set of a Product using the Product Import process?
 
 No, importing a product that already exists and setting its attribute_set_code column to a different value than it already is will not change its attribute set.
