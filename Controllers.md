@@ -25,9 +25,9 @@ The execute method should return a Result object.
 |Result Object Name|Class|Description|
 |----|----|----|
 |Page|Magento\Framework\View\Result\Page|Used for returning html.|
-|JSON|Magento\Controller\Result\Json|Used for returning JSON data.|
-|Forward|Magento\Controller\Result\Forward|Used to internally forward to another controller action. Does not redirect the user to another url.|
-|Redirect|Magento\Controller\Result\Redirect|Used to redirect the user to another url.|
+|JSON|Magento\Framework\Controller\Result\Json|Used for returning JSON data.|
+|Forward|Magento\Framework\Controller\Result\Forward|Used to internally forward to another controller action. Does not redirect the user to another url.|
+|Redirect|Magento\Framework\Controller\Result\Redirect|Used to redirect the user to another url.|
 
 
 ### Overriding Controllers
