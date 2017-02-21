@@ -74,14 +74,14 @@ You can add the following columns to your import csv
 
 |column|Description|
 |---|---|
-|base_image||
+|base_image|The main image on the product view page.|
 |base_image_label|Alt text for the base image.|
-|small_image||
+|small_image|The product image that is used on the category view page, as well as in related products and other product lists.|
 |small_image_label|Alt text for the small image.|
-|thumbnail_image||
+|thumbnail_image|The product image that is used in the shopping cart, as well as in the media gallery no the product view page.|
 |thumbnail_image_label|Alt text for the thumbnail image.|
-|additional_images|A comma separated list of additional images.|
-|additional_image_labels|A comma separated list of image labels|
+|additional_images|A comma separated list of additional images. These will be used in the media gallery on the product view page.|
+|additional_image_labels|A comma separated list of image labels. The labels should be in the same order as the images in the additional_images column.|
 
 **TODO**
 
