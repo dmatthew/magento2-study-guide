@@ -83,8 +83,15 @@ You can add the following columns to your import csv
 |additional_images|A comma separated list of additional images. These will be used in the media gallery on the product view page.|
 |additional_image_labels|A comma separated list of image labels. The labels should be in the same order as the images in the additional_images column.|
 
-**TODO**
+#### Uploading images
 
-(There are 2 ways of getting images, uploading them to your server in the pub/media/import directory, or use a url in your image columns in the csv) 
+Images can be imported one of two ways:
+
+1. Importing images from a local server.
+  1. Upload images to your Magento server. The directory you upload them to defaults to `pub/media/import`, but you can use a different directory if you specify the relative path to that directory in the "Images File Directory" field when importing your products. In your import CSV file, enter the file name of you image within your "Images File Directory". Once your images are uploaded you can import your products.
+
+1. Importing images from an external server.
+  1. The import process can upload images to your server for you if you specify a url in your image columns. Just specify the url to your image and Magento will automatically download the image and save it on your server.
+    1. NOTE: The image name will be the same as the url where the image was downloaded from, with certain characters removed. For example, if the image was downloaded from `http://www.example.com/images/my-image.jpg`, the new image file name will be `httpwww.example.comimagesmy-image.jpg`.
 
 **NOTE**: If the image already exists, you may not be able to update its image label through the import process. Image labels may need to be updated through the Admin by editing a product directly. (I ran into this issue, but I cannot confirm if it is the actual behavior)
