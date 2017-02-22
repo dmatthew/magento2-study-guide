@@ -95,3 +95,9 @@ Images can be imported one of two ways:
     1. NOTE: The image name will be the same as the url where the image was downloaded from, with certain characters removed. For example, if the image was downloaded from `http://www.example.com/images/my-image.jpg`, the new image file name will be `httpwww.example.comimagesmy-image.jpg`.
 
 **NOTE**: If the image already exists, you may not be able to update its image label through the import process. Image labels may need to be updated through the Admin by editing a product directly. (I ran into this issue, but I cannot confirm if it is the actual behavior)
+
+#### Setting multiple store values for labels
+
+~~You can set a label value for a specified store just like any other attribute which has store view scope, however, you must make sure to include the image as well in your CSV. For example, if you are importing base_image_labels for your secondary French store, you must also include the base_image column in your CSV, even if it is the same base_image as the default store.~~
+
+UPDATE: Magento does not allow you to do this. You can only set the label the first time you import a product image. This looks to be an issue in Magento ~2.1.4. This appears to relate to the "***NOTE***" I pointed out above.
