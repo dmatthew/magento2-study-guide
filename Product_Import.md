@@ -96,6 +96,8 @@ Images can be imported one of two ways:
 
 **NOTE**: If the image already exists, you may not be able to update its image label through the import process. Image labels may need to be updated through the Admin by editing a product directly. (I ran into this issue, but I cannot confirm if it is the actual behavior)
 
+**NOTE 2**: You cannot replace images using the Product Import tool. Images can only be added unless you set the `Import Behaviour` value to `Replace`. But be careful using `Replace` because it will delete and recreate the product with a new ID, which is probably not the behavious you want. If you want your new images to replace the existing images you will need to delete the existing images first.
+
 #### Setting multiple store values for labels
 
 ~~You can set a label value for a specified store just like any other attribute which has store view scope, however, you must make sure to include the image as well in your CSV. For example, if you are importing base_image_labels for your secondary French store, you must also include the base_image column in your CSV, even if it is the same base_image as the default store.~~
